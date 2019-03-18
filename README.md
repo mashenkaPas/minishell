@@ -1,7 +1,7 @@
 # minishell
-#before running your program , change zsh to bash
-zsh dont support get_next_line. 
-if you want to keep zsh, change get_next_line to readLine();readLine ->also support automatical upload of files.
+#before running your program,change zsh to bash
+#zsh dont support get_next_line. 
+#if you want to keep zsh, change get_next_line to readLine();readLine ->also support automatical upload of files.
 
 
 
