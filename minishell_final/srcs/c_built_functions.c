@@ -68,4 +68,5 @@ int		lsh_help(char **args)
 		i++;
 	}
 	return (1);
+	free(args);
 }
