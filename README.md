@@ -7,11 +7,14 @@
 
 The objective of this project is for you to create the simplest start of a shell script. Shell is beautiful! Isn’t there a famous saying? “As beautiful as Shell?” Thanks to all the shell projects, you will connect with the infinite power of Mankind Intelligence
 
+
 amazing resourse https://brennan.io/2015/01/16/write-a-shell-in-c/
 
 
 
-the main system functions: 
+The main system functions: 
+
+
 Chdir
 int chdir(const char *path);
 The chdir command is a system function (system call) which is used to change the current working directory. On some systems, this command is used as an alias for the shell command cd. chdir changes the current working directory of the calling process to the directory specified in path.
