@@ -16,11 +16,13 @@ The main system functions:
 
 
 Chdir
+
 int chdir(const char *path);
 The chdir command is a system function (system call) which is used to change the current working directory. On some systems, this command is used as an alias for the shell command cd. chdir changes the current working directory of the calling process to the directory specified in path.
 
 
 Fork-
+
 Fork system call use for creates a new process, which is called child process, which runs concurrently with process  parent process. function fork return the integer ,if the value is Negative -creation of a child process was unsuccessful,if value 0 returned to the newly created child process. and if value is >0 r returned to parent or caller.
 IMPORTANT Parent process and child process are running the same program, but it does not mean they are identical. OS allocate different data and state for these two processes and also control the flow of these processes can be different.
 
@@ -40,19 +42,23 @@ int execvpe(const char *file, char *const argv[],
 
 
 IMPORTANT Fork() vs Exec()
+
 The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exex system call replaces the current process with a new program.
 
 
 Wait-
+
 A call to wait() blocks the calling process until one of its child processes exits or a signal is received. After child process terminates, parent continues its execution after wait system call instruction. If program has no child process then wait() returns immediately “-1”.
 
 
 IMPORATANT 
+
 if more than one child processes are terminated, then wait() reaps any arbitrarily child process but if we want to reap any specific child process, we use waitpid() function.
 WAITPID return pid of child, if child has exited , or 0, if using WNOHANG and child hasn’t exited.
 
 
 HOW TO find out the status of child process ?
+
 Status information about the child reported by wait is more than just the exit status of the child, it also includes
 1. WIFEXITED(status): child exited normally
 • WEXITSTATUS(status): return code when child exits
@@ -64,3 +70,7 @@ Status information about the child reported by wait is more than just the exit s
 
 3. WIFSTOPPED(status): child is stopped
 • WSTOPSIG(status): gives the number of the stop signal
+
+Access()
+access() checks whether the calling process can access the file pathname. If pathname is a symbolic link, it is dereferenced.
+
