@@ -12,7 +12,7 @@
 
 NAME = ft_minishell
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address
+FLAGS = -Wall -Werror -Wextra -fsanitize=address
 DEPS = includes
 LIBS = libft/libft.a b_printf/libftprintf.a
 SRC = main.c srcs/a_execution.c srcs/c_built_functions.c srcs/d_built_functions.c srcs/e_split.c srcs/f_split_functions.c \
