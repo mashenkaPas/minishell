@@ -54,7 +54,7 @@ IMPORTANT Fork() vs Exec()
 The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exex system call replaces the current process with a new program.
 
 
-Wait
+Wait-
 
 A call to wait() blocks the calling process until one of its child processes exits or a signal is received. After child process terminates, parent continues its execution after wait system call instruction. If program has no child process then wait() returns immediately “-1”.
 
@@ -79,6 +79,7 @@ Status information about the child reported by wait is more than just the exit s
 3. WIFSTOPPED(status): child is stopped
 • WSTOPSIG(status): gives the number of the stop signal
 
-Access()
+Access-
+
 access() checks whether the calling process can access the file pathname. If pathname is a symbolic link, it is dereferenced.
 
