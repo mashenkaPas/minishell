@@ -58,6 +58,10 @@ Wait-
 
 A call to wait() blocks the calling process until one of its child processes exits or a signal is received. After child process terminates, parent continues its execution after wait system call instruction. If program has no child process then wait() returns immediately “-1”.
 
+pid_t wait(int *status);
+
+pid_t waitpid(pid_t pid, int *status, int options);
+
 
 IMPORATANT 
 
