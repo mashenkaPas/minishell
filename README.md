@@ -11,18 +11,16 @@ The objective of this project is for you to create the simplest start of a shell
 amazing resourse https://brennan.io/2015/01/16/write-a-shell-in-c/
 
 
+# MAIN SYSTEM FUNCTIOINS :
 
- MAIN SYSTEM FUNCTIOINS :
-
-Chdir
-
+# Chdir
 
 
 int chdir(const char *path);
 The chdir command is a system function (system call) which is used to change the current working directory. On some systems, this command is used as an alias for the shell command cd. chdir changes the current working directory of the calling process to the directory specified in path.
 
 
-Fork-
+#Fork-
 
 
 
@@ -30,7 +28,7 @@ Fork system call use for creates a new process, which is called child process, w
 IMPORTANT Parent process and child process are running the same program, but it does not mean they are identical. OS allocate different data and state for these two processes and also control the flow of these processes can be different.
 
 
-Execve-
+# Execve-
 
 
 
@@ -54,14 +52,14 @@ int execvpe(const char *file, char *const argv[],
 
 
 
-IMPORTANT Fork() vs Exec()
+###           IMPORTANT Fork() vs Exec()
 
 
 
 The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exex system call replaces the current process with a new program.
 
 
-Wait-
+# Wait-
 
 
 
@@ -72,7 +70,7 @@ pid_t wait(int *status);
 pid_t waitpid(pid_t pid, int *status, int options);
 
 
-IMPORATANT 
+# IMPORATANT 
 
 
 
@@ -94,7 +92,7 @@ Status information about the child reported by wait is more than just the exit s
 3. WIFSTOPPED(status): child is stopped
 • WSTOPSIG(status): gives the number of the stop signal
 
-Access-
+# Access-
 
 
 
