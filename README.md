@@ -48,12 +48,13 @@ int execvpe(const char *file, char *const argv[],
                               char *const envp[]);
 
 
+
 IMPORTANT Fork() vs Exec()
 
 The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exex system call replaces the current process with a new program.
 
 
-Wait-
+Wait
 
 A call to wait() blocks the calling process until one of its child processes exits or a signal is received. After child process terminates, parent continues its execution after wait system call instruction. If program has no child process then wait() returns immediately “-1”.
 
