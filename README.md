@@ -33,11 +33,16 @@ The exec() family of functions replaces the current process image with a new pro
 https://linux.die.net/man/3/exec
 
 int execl(const char *path, const char *arg, ...);
+
 int execlp(const char *file, const char *arg, ...);
+
 int execle(const char *path, const char *arg, ..., 
                                char * const envp[]);
+                               
 int execv(const char *path, char *const argv[]);
+
 int execvp(const char *file, char *const argv[]);
+
 int execvpe(const char *file, char *const argv[], 
                               char *const envp[]);
 
