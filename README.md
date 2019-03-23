@@ -20,12 +20,15 @@ int chdir(const char *path);
 The chdir command is a system function (system call) which is used to change the current working directory. On some systems, this command is used as an alias for the shell command cd. chdir changes the current working directory of the calling process to the directory specified in path.
 
 
+On success, zero is returned.  On error, -1 is returned,
+
 # Fork-
 
 
 
-Fork system call use for creates a new process, which is called child process, which runs concurrently with process  parent process. function fork return the integer ,if the value is Negative -creation of a child process was unsuccessful,if value 0 returned to the newly created child process. and if value is >0 r returned to parent or caller.
-IMPORTANT Parent process and child process are running the same program, but it does not mean they are identical. OS allocate different data and state for these two processes and also control the flow of these processes can be different.
+Fork system call use for creates a new process, which is called child process, which runs concurrently with process  parent process. function fork return the integer ,if the value is Negative -creation of a child process was unsuccessful,if value 0 returned to the newly created child process. and if value is >0 returned to parent or caller.
+# IMPORTANT
+Parent process and child process are running the same program, but it does not mean they are identical. OS allocate different data and state for these two processes and also control the flow of these processes can be different.
 
 
 # Execve-
@@ -95,6 +98,8 @@ Status information about the child reported by wait is more than just the exit s
 # Access-
 
 
-
 access() checks whether the calling process can access the file pathname. If pathname is a symbolic link, it is dereferenced.
 
+
+# pid_t 
+data type stands for process identification and it is used to represent process ids. 
