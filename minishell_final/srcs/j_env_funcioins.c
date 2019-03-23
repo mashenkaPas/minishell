@@ -80,5 +80,4 @@ void	replace_value(char *key, char *new_value)
 	}
 	else
 		current_node->value = ft_strdup("");
-	ft_strdel(&new_value);
 }
