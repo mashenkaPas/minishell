@@ -59,8 +59,7 @@ int execvpe(const char *file, char *const argv[],
 
 
 
-The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exex system call replaces the current process with a new program.
-
+The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exec system call replaces the current process image with another (different) one.
 
 # Wait-
 
