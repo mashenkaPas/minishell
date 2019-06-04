@@ -13,7 +13,7 @@ amazing resourse https://brennan.io/2015/01/16/write-a-shell-in-c/
 
 # MAIN SYSTEM FUNCTIOINS :
 
-# Chdir
+## Chdir
 
 
 int chdir(const char *path);
@@ -22,16 +22,16 @@ The chdir command is a system function (system call) which is used to change the
 
 On success, zero is returned.  On error, -1 is returned,
 
-# Fork-
+## Fork
 
 
 
 Fork system call use for creates a new process, which is called child process, which runs concurrently with process  parent process. function fork return the integer ,if the value is Negative -creation of a child process was unsuccessful,if value 0 returned to the newly created child process. and if value is >0 returned to parent or caller.
-# IMPORTANT
+## IMPORTANT
 Parent process and child process are running the same program, but it does not mean they are identical. OS allocate different data and state for these two processes and also control the flow of these processes can be different.
 
 
-# Execve-
+## Execve
 
 
 
@@ -61,7 +61,7 @@ int execvpe(const char *file, char *const argv[],
 
 The fork system call creates a new process. The new process created by fork() is copy of the current process except the returned value. The exec system call replaces the current process image with another (different) one.
 
-# Wait-
+## Wait
 
 
 
@@ -94,11 +94,11 @@ Status information about the child reported by wait is more than just the exit s
 3. WIFSTOPPED(status): child is stopped
 • WSTOPSIG(status): gives the number of the stop signal
 
-# Access-
+## Access
 
 
 access() checks whether the calling process can access the file pathname. If pathname is a symbolic link, it is dereferenced.
 
 
-# pid_t 
+## pid_t 
 data type stands for process identification and it is used to represent process ids. 
