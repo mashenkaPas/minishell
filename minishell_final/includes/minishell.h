@@ -86,6 +86,6 @@ int				check_if_path_exists(char **p, char *path, char **args);
 int				find_command(char **args);
 void			find_command_in_dirs(char **d_comm);
 int				lsh_execute(char **args);
-void			lsh_loop(void);
+int			  lsh_loop(void);
 
 #endif

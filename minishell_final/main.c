@@ -12,6 +12,8 @@
 
 #include "includes//minishell.h"
 
+#define PROMPT "supershell> "
+
 void	lstdel_env(t_env **list)
 {
 	t_env	*temp;
@@ -27,27 +29,34 @@ void	lstdel_env(t_env **list)
 	}
 }
 
-void	lsh_loop(void)
+int 	lsh_loop(void)
 {
 	char	*line;
 	char	**args;
 	int		status;
+	int   result;
 
 	status = 1;
 	while (status)
 	{
-		write(1, "supershell> ", 12);
-		get_next_line(0, &line);
+		write(1, PROMPT, sizeof(PROMPT) - 1);
+
+		result = get_next_line(0, &line);
+		if (result == 0)
+			return 0;
+		else if (result == -1)
+			return -1;
+
 		args = split2(line);
 		status = lsh_execute(args);
 		ft_strdel(&line);
 		delete_double_pointer(args);
 	}
+	return status;
 }
 
 int		main(void)
 {
 	create_env();
-	lsh_loop();
-	return (0);
+	return lsh_loop();
 }
